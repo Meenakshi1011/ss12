@@ -1,0 +1,593 @@
+/* Resetting margin, padding, and box-sizing for all elements */
+$brand-color:whitesmoke;
+$brand-bggreen:rgb(130, 189, 41);
+$brand-bgblack:black;
+
+/*header*/
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+html{
+  overflow-x: hidden;
+}
+
+body{
+  overflow: hidden;
+
+}
+/*header*/
+
+header {
+  background-color: black;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.container{
+  background-color: black;
+  position: absolute;
+  top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Navbar Bottom Animation */
+.container::before {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 4px;
+ background-color: #C94040;
+ transition: width 0.5s ease;
+}
+
+/* Trigger Bottom Animation on Hover */
+.container:hover::before {
+ width: 100%;
+}
+
+
+/* Navbar Bottom Animation */
+.container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #C94040;
+  transition: width 0.5s ease;
+}
+
+/* Trigger Bottom Animation on Hover */
+.container:hover::before {
+  width: 100%;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect on Menu Links */
+.menu-link:hover {
+  color: #C94040;
+}
+
+
+.container img {
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: 0px;
+  margin-left: 150px;
+}
+
+nav > ul {
+  display: flex;
+  margin-left: 100px;
+}
+
+nav > ul > li {
+  padding: 30px 20px;
+  list-style-type: none;
+}
+
+nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mega Menu */
+.mega-menu {
+  position: absolute;
+  background-color: rgb(222, 219, 219);
+  left: 10%; /* Aligns with parent */
+  opacity: 0;
+  visibility: hidden;
+  flex-wrap: wrap;
+  top: 100%;
+  width: 80%; /* Full width under navbar */
+  height: auto; /* Adjust height dynamically */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  border-radius: 5px;
+  display: flex;
+  padding: 20px;
+  z-index: 2000; /* Ensures it stays on top */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Mega Menu on Hover */
+nav > ul > li:hover .mega-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mega Menu Columns */
+.column {
+  flex: 1; /* Equal width for all columns */
+  padding: 0px;
+  margin: 0;
+}
+
+/* Mega Menu Links */
+.column ul {
+  list-style: none;
+}
+
+.column ul li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 400;
+  display: block;
+  justify-content: flex-start;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.column ul li a:hover {
+  color: #C94040;
+  border-bottom: 2px solid #C94040;
+}
+
+/* Fix Overflow Issue */
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+/* Icons Section */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap between icons */
+  list-style-type: none;
+}
+
+/* Button Styles */
+.icons button {
+  background-color: rgb(70, 161, 70);
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icons button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Vertical Line */
+.vertical-line {
+  border: none;
+  border-left: 2px solid whitesmoke;
+  height: 30px;
+}
+
+/* Social Media Icons */
+.social-media {
+  text-decoration: none;
+  position: relative;
+}
+
+.social-media i {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  margin-right: 10px; /* Ensure 10px gap */
+}
+
+/* Individual Icon Hover Line */
+.social-media::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #C94040;
+  transition: width 0.3s ease;
+}
+
+/* Expand Icon Hover Line */
+.social-media:hover::before {
+  width: 100%;
+}
+
+/* Icon Hover Color */
+.social-media i:hover {
+  color: #C94040;
+}
+
+.footer-container{
+  width: 100%;
+  height: 350px;
+  background-color: black;
+  margin: 0;
+  padding: auto;
+
+ 
+.footer-row{
+  display: flex;
+  color: white;
+  align-items: flex-start;
+  padding: 50px 50px 0 50px;
+  justify-content: space-evenly;
+
+}
+
+.footer-column{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+
+
+}
+.footer-column li{
+  list-style-type: none;
+  line-height: 2;
+
+}
+.footer-column ul li a{
+   text-decoration: none;
+   color: rgb(144, 142, 142);
+
+}
+
+.footer-column ul li a:hover{
+  text-decoration: none;
+  color:  #C94040;
+
+  
+}
+
+}
+
+.footer-copyrights{
+  color: rgb(144, 142, 142);
+  margin: 0 0 0 100px;
+  line-height: 2;
+  display: flex;
+
+
+  .footer-policy{
+      
+      margin-left: 500px;
+      
+      
+  }
+.footer-policy-wp a i{
+   color: white;
+   margin-left: 30px;
+   font-size: 40px;
+ 
+}
+
+}
+/*------------------------------------------------------------------------------------------*/
+
+.line {
+  border: 2px solid red;
+  background-color:red;
+  transition: width 3s ease-in-out; 
+  width: 0; 
+  border-radius: 10px;
+}
+
+.carousel-item.active .line {
+  width: 90%;
+  opacity: 1;
+}
+.c-item{
+  .c-img{
+    height: 100vh;
+  }
+}
+
+
+.section-about{
+  background-color:white;
+  position: relative;
+
+      
+  padding-top: 0;
+  margin-bottom: 50px;
+  padding-right: 250px;
+  margin-left: 150px;
+ 
+  
+}
+
+.section-container{
+  background-color:rgb(238, 237, 237);
+  min-height: 1070px;
+
+}
+.section-content{
+  display: flex;
+  position: relative;
+
+}
+.about-us{
+   margin-top: 100px;
+   flex-direction: column;
+   height: 100%;
+   width: 650px;
+   text-align: justify;
+
+   
+   
+
+   h4{
+    font-size: 30px;
+   }
+   p{
+    font-size: 15px;
+    line-height: 2;
+   }
+   button {
+    background-color: $brand-bggreen;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+
+    a{
+      text-decoration: none;
+      color: $brand-color;
+    }
+   }
+
+}
+
+.about-img{
+  margin-top: 50px;
+  position: absolute;
+  right: -150px;
+}
+
+.cards-value{
+  display:flex;
+  margin-top: 280px;
+  gap: 30px;
+  position:absolute;
+
+  .card{
+    border-radius: 5px;
+    background-color: $brand-bggreen;
+    position: relative;
+    border: none;
+   
+    .card-body{
+    padding-top: 90px;
+  
+      hr{
+      background-color:$brand-color;
+      height: 2px;
+     
+    }
+   
+
+  
+  }
+
+  .card-body:hover{
+     background-color: $brand-color;
+  }
+}
+}
+.card-text{
+  list-style-type: circle;
+  
+  
+}
+
+.card-text::marker{
+  font-size: 20px;
+}
+
+.top-div{
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  background-color: $brand-color;
+  border: 2px solid $brand-bggreen;
+  border-radius: 5px;
+  top: -50px;
+  left: -20px;
+  border-bottom-right-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+img{
+  height: 50px;
+  width: 50px;
+ left: -20px;
+  
+
+}
+}
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 30px;  
+}
+h2 hr{
+  flex-grow: 0.1;
+  border: 0;
+  height: 4px;
+  background-color: red;
+  opacity: 1;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.products{
+
+  width: 100%;
+  height: 450px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  
+
+  .product-container{
+ 
+    height: 100%;
+    width: 100%;
+   
+    .carousel-inner img{
+      height: 450px;
+    }
+  }
+  
+}
+
+.service-class{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 150px;
+  padding-left: 150px;
+  background-color:rgb(238, 237, 237) ;
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+.xxx{
+  display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  .service-column-title {
+    display: flex;
+    align-items: center; 
+    
+  }
+
+  .service-column-def{
+    width: 60%;
+    font-size: 13px;
+    float: right;
+ 
+  }
+  
+}
+
+.grid-container {
+  display: grid;
+  
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  padding: 10px 8px;
+
+  border-radius: 5px;
+
+  .content {
+    
+    p{
+    font-size: 16px;
+  }
+}
+
+.image{
+  img{
+    height: 50px;
+    width: 50px;
+  }
+}
+}
+
+/*------------CLIENTS--------------*/
+.clients-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem 10rem;
+    gap: 50px;
+}
+.client-def{
+  p{
+    font-size: 17px;
+  }
+  button{
+    padding: 10px;
+    border: none;
+    background-color: #C94040;
+    border-radius: 5px;
+
+    a{
+      color: white;
+      font-size: 17px;
+      text-decoration: none;
+    }
+  }
+}
+
+.clients-container-image{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+
+footer{
+  background-color: black;
+}
+
+/*------------------PRODUCTS-------------------------------*/
